@@ -2,12 +2,14 @@
  * Author:  Agustin Lizarraga
  * Project Title: "Introduction to Embedded Systems Software and Development Environments"
  * GitHub Location: https://github.com/alizarra/coursera-c1m1.git
+ * Go into the master branch: "https://github.com/alizarra/coursera-c1m1/tree/master"
  *
  * Next You see the output of the program:
- * The first corresponds to non sorted elements of the array ; 
- * The second paragraph shows sorted from largest to smallest
- * Each element has its associated index:value pair
- * The last section show the values from print_statistics()
+ *   The first corresponds to non sorted elements of the array ; 
+ *   The second paragraph shows sorted elements from largest to smallest
+ *   Each element has its associated index:value pair
+ *   The index number maps the array beginning with 0
+ *   The last section show the values from print_statistics() output. What it really does is to invoke each of the functions created.
  *
  *     alizarra@Coursera:~/Programming/Lizarraga_Coursera$ ./stats.out
  *     [ 0]  34	[ 1] 201	[ 2] 190	[ 3] 154	[ 4]   8	[ 5] 194	[ 6]   2	[ 7]   6	
