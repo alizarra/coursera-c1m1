@@ -62,33 +62,77 @@ void main() {
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
 
+print_array(test , SIZE);
+printf("\n");
+
+sort_array(test,SIZE);
+print_array(test,SIZE);
+printf("\n");
+
+print_statistics(test,SIZE);
+
+
 
 }
 
 /* Add other Implementation File Code Here */
 
 int cmpfunc (const void * a, const void * b) {
+   return ( *(uint8_t*)b - *(uint8_t*)a );
 }
 
 void sort_array(char *array, int length) {
+     qsort(array,length,sizeof(char),cmpfunc);	  
 }
 
 double find_mean(char *array, int length) {
+	double mean = 0;
+		for ( int i=0; i < length ;  ) {
+			mean += (uint8_t) array[i++] ; 
+		}
+		return mean/length;
 }
 
 void print_array(char *array , int length ) {
+	for ( int i=0; i < length ;  ) {
+		for ( int j=0 ; j < 5 ; j++ ) {
+			for ( int k=0 ; k < 8 ; k ++ ) {
+			  printf("[%2u] %3u\t", i, array[i] & 0xff );
+			  i++;
+			}
+			printf("\n");
+		}
+    }	
+
 }
 
 uint8_t find_maximum(char *array, int length) {
+	sort_array(array,length);
+	return array[0];
 }
 
 uint8_t find_minimum(char *array, int length) {
+	sort_array(array,length);
+	return array[length-1];
 }
 
 double find_median(char *array, int length) {
+	sort_array(array,length);
+	if ( length % 2 ) {// odd number of elements
+		return array[ (uint8_t)length/2 + 1 ] ; 
+    } 
+	else  {// even number of elements
+		return  (double) ( array[(uint8_t)length/2 - 1]  + array[(uint8_t)length/2] ) / 2 ;
+	}
 }
 
 // A function that prints the statistics of an array including minimum, maximum, mean, and median.
 void print_statistics(char *array, int length) {
+     
+     printf("%f Arithmetic Mean\n",find_mean(array,length));
+     printf("%.0u Maximum Value in Array\n ",find_maximum(array, length));    
+     printf("%u Minimum Value in Array\n",find_minimum(array, length));    
+     printf("%f Median Value in Array\n",find_median(array, length));    
+	 
      }
 

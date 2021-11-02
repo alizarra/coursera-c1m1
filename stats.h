@@ -22,6 +22,8 @@
    
    /* Add Your Declarations and Function Comments here */ 
    
+   typedef unsigned char uint8_t;
+
    void print_array(char *array , int length );
    /**
     * @brief 
