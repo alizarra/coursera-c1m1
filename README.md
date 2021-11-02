@@ -1,5 +1,8 @@
 /* Add Author and Project Details here */
  * Author:  Agustin Lizarraga
+ * GitHub Location: https://github.com/alizarra/coursera-c1m1.git
+ *
+ * Next You see the output of the program:
  *
  *     alizarra@Coursera:~/Programming/Lizarraga_Coursera$ ./stats.out
  *     [ 0]  34	[ 1] 201	[ 2] 190	[ 3] 154	[ 4]   8	[ 5] 194	[ 6]   2	[ 7]   6	
